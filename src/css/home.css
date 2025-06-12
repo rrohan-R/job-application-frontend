@@ -1,0 +1,97 @@
+.sliding-courses-container {
+  margin: 2rem 0;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.sliding-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sliding-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliding-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.course-slide {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  margin-right: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.manual-slider-container {
+  margin-top: 3rem;
+  background-color: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.article-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.manual-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.manual-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.manual-slider::-webkit-scrollbar-thumb {
+  background-color: #94a3b8;
+  border-radius: 10px;
+}
+
+.manual-slider::-webkit-scrollbar-track {
+  background-color: #e2e8f0;
+}
+
+.article-card {
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #0f172a;
+  flex-shrink: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.article-card:hover {
+  transform: scale(1.05);
+  background-color: #e2e8f0;
+}
