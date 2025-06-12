@@ -58,6 +58,7 @@ function Header() {
           <Link to="/saved-jobs" onClick={() => setMenuOpen(false)}>Saved Jobs</Link>
           <Link to="/resume-builder" onClick={() => setMenuOpen(false)}>Resume Builder</Link>
           <Link to="/post-job" onClick={()=> setMenuOpen(false)}>Post Job</Link>
+          <Link to="/ai-chat-bot" onClick={()=> setMenuOpen(false)}>AI Chat Bot</Link>
         </div>
       )}
     </div>

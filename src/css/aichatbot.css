@@ -1,0 +1,40 @@
+.wolfram-chat-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.wolfram-chat-container h2 {
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.wolfram-chat-container input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.wolfram-chat-container button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background-color: #0078d4;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wolfram-chat-container .response {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  font-family: 'Georgia', serif;
+}

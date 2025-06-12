@@ -16,6 +16,7 @@ import Dashboard from './pages/Dashboard';
 import NotAdmin from './pages/NotAdmin';
 import ChatButton from './components/ChatButton';
 import ApplyForm from './pages/ApplyForm';
+import AiChatBot from './pages/AiChatBot';
 import "./css/app.css";
 
 function ProtectedRoute({ children }) {
@@ -52,6 +53,7 @@ function MainApp() {
           <Route path="/resume-builder" element={<ProtectedRoute><ResumeBuilder /></ProtectedRoute>} />
           <Route path="/not-admin" element={<NotAdmin />} />
           <Route path="/apply/:jobId" element={<ApplyForm />} />
+          <Route path="/ai-chat-bot" element={<AiChatBot />} />
         </Routes>
       </main>
 
