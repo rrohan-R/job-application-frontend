@@ -11,7 +11,7 @@ function Jobs() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch('http://localhost:8080/getJobs', {
+    fetch('https://job-application-backend-8k5f.onrender.com/getJobs', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`
@@ -31,7 +31,7 @@ function Jobs() {
       });
 
 
-    fetch('http://localhost:8080/getSavedJobs', {
+    fetch('https://job-application-backend-8k5f.onrender.com/getSavedJobs', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`
@@ -57,7 +57,7 @@ function Jobs() {
     const isSaved = savedJobs.has(job.jobId);
 
     if (isSaved) {
-      fetch(`http://localhost:8080/unsaveJob/${job.jobId}`, {
+      fetch(`https://job-application-backend-8k5f.onrender.com/unsaveJob/${job.jobId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`
@@ -74,7 +74,7 @@ function Jobs() {
           alert('Failed to unsave job.');
         });
     } else {
-      fetch(`http://localhost:8080/saveSavedJob`, {
+      fetch(`https://job-application-backend-8k5f.onrender.com/saveSavedJob`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

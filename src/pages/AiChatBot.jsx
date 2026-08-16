@@ -11,7 +11,7 @@ const AiChatBot = () => {
     if (!input.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:8080/api/wolfram?question=${encodeURIComponent(input)}`);
+      const res = await axios.get(`https://job-application-backend-8k5f.onrender.com/api/wolfram?question=${encodeURIComponent(input)}`);
       setResponse(res.data);
     } catch (error) {
       setResponse("Sorry, something went wrong.");

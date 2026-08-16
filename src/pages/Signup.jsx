@@ -11,7 +11,7 @@ function Signup() {
 
   const handleSignup = async () => {
     try {
-      const res = await fetch("http://localhost:8080/api/auth/signup", {
+      const res = await fetch("https://job-application-backend-8k5f.onrender.com/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),

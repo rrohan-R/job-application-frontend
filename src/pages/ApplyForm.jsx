@@ -12,7 +12,7 @@ function ApplyForm() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch(`http://localhost:8080/getJobs`, {
+    fetch(`https://job-application-backend-8k5f.onrender.com/getJobs`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())
@@ -42,7 +42,7 @@ function ApplyForm() {
     payload.append("resume", resume);
 
     try {
-      const res = await fetch("http://localhost:8080/submitApplication", {
+      const res = await fetch("https://job-application-backend-8k5f.onrender.com/submitApplication", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: payload
