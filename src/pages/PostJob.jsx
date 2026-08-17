@@ -18,7 +18,7 @@ function PostJob() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    if (!user || user.role !== "ROLE_ADMIN") {
+    if (!user || user.username !== "appadmin") {
       navigate("/not-admin");
     }
   }, [user, navigate]);
