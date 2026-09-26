@@ -11,7 +11,7 @@ function Signup() {
 
   const handleSignup = async () => {
     try {
-      const res = await fetch("https://job-application-backend-swart.vercel.app/api/auth/signup", {
+      const res = await fetch("https://job-application-backend-ea8w.onrender.com/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),

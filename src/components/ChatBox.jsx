@@ -14,7 +14,7 @@ const ChatBox = () => {
   const username = user?.username || 'User';
 
   useEffect(() => {
-    const socket = new SockJS('https://job-application-backend-swart.vercel.app/ws-chat');
+    const socket = new SockJS('https://job-application-backend-ea8w.onrender.com/ws-chat');
     const client = new Client({
       webSocketFactory: () => socket,
       reconnectDelay: 5000,

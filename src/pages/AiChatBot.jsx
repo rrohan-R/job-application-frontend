@@ -11,7 +11,7 @@ const AiChatBot = () => {
     if (!input.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.get(`https://job-application-backend-swart.vercel.app/api/gemini?question=${encodeURIComponent(input)}`);
+      const res = await axios.get(`https://job-application-backend-ea8w.onrender.com/api/gemini?question=${encodeURIComponent(input)}`);
       setResponse(res.data);
     } catch (error) {
       setResponse("Sorry, something went wrong.");

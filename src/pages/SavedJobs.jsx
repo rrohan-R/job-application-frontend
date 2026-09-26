@@ -9,7 +9,7 @@ function SavedJobs() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch("https://job-application-backend-swart.vercel.app/getSavedJobs", {
+    fetch("https://job-application-backend-ea8w.onrender.com/getSavedJobs", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
