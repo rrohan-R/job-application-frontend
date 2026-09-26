@@ -12,7 +12,7 @@ function ApplyForm() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch(`https://job-application-backend-8k5f.onrender.com/getJobs`, {
+    fetch(`https://job-application-backend-swart.vercel.app/getJobs`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())
@@ -42,7 +42,7 @@ function ApplyForm() {
     payload.append("resume", resume);
 
     try {
-      const res = await fetch("https://job-application-backend-8k5f.onrender.com/submitApplication", {
+      const res = await fetch("https://job-application-backend-swart.vercel.app/submitApplication", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: payload

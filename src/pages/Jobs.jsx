@@ -11,7 +11,7 @@ function Jobs() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch('https://job-application-backend-8k5f.onrender.com/getJobs', {
+    fetch('https://job-application-backend-swart.vercel.app/getJobs', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`
@@ -31,7 +31,7 @@ function Jobs() {
       });
 
 
-    fetch('https://job-application-backend-8k5f.onrender.com/getSavedJobs', {
+    fetch('https://job-application-backend-swart.vercel.app/getSavedJobs', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`
@@ -57,7 +57,7 @@ function Jobs() {
     const isSaved = savedJobs.has(job.jobId);
 
     if (isSaved) {
-      fetch(`https://job-application-backend-8k5f.onrender.com/unsaveJob/${job.jobId}`, {
+      fetch(`https://job-application-backend-swart.vercel.app/unsaveJob/${job.jobId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`
@@ -74,7 +74,7 @@ function Jobs() {
           alert('Failed to unsave job.');
         });
     } else {
-      fetch(`https://job-application-backend-8k5f.onrender.com/saveSavedJob`, {
+      fetch(`https://job-application-backend-swart.vercel.app/saveSavedJob`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

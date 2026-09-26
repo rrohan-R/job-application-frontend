@@ -34,7 +34,7 @@ function PostJob() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://job-application-backend-8k5f.onrender.com/postJob", {
+      const response = await fetch("https://job-application-backend-swart.vercel.app/postJob", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
