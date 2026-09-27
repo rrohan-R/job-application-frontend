@@ -8,17 +8,26 @@ const AiChatBot = () => {
   const [loading, setLoading] = useState(false);
 
   const askQuestion = async () => {
-    if (!input.trim()) return;
-    setLoading(true);
-    try {
-      const res = await axios.get(`https://job-application-backend-ea8w.onrender.com/api/gemini?question=${encodeURIComponent(input)}`);
-      setResponse(res.data);
-    } catch (error) {
-      setResponse("Sorry, something went wrong.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  if (!input.trim()) return;
+
+  setLoading(true);
+
+  try {
+    const res = await axios.post(
+      "https://job-application-backend-ea8w.onrender.com/api/gemini",
+      {
+        question: input
+      }
+    );
+
+    setResponse(res.data);
+  } catch (error) {
+    console.error("Gemini API error:", error);
+    setResponse("Sorry, something went wrong.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="wolfram-chat-container">
